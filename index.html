@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" theme="">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://cdn.tailwindcss.com"></script>
+   <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>Naas eMart Dashboard</title>
 </head>
@@ -27,11 +29,11 @@
       </button>
 
       <!-- Brand Logo -->
-      <!-- <img
-        src="assets/main logo.png"
+      <img
+        src="assets/nM logo.png"
         alt="Naas eMart"
-        class="h-6 max-w-[250px] object-contain"
-      /> -->
+        class="h-6 max-w-[550px] object-contain"
+      />
     </div>
 
     <!-- RIGHT -->
@@ -166,13 +168,30 @@
 
 <!-- ================= MAIN ================= -->
 <main class="p-4">
-    <div class="dash-content mb-3">
+    <div class="dash-content mb-3 flex justify-between">
         <div class="left-content">
             <h4 class="text-xl font-semibold mb-2">Dashboard</h4>
             <p class="text-gray-400 text-xs">dashboard/ <span class="text-blue-500 text-xs">dashboard</span></p>
           
         </div>
-        <div class="right-content"></div>
+       <div class="right-content grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-2 items-center">
+  
+  <!-- Date -->
+  <div class="date flex items-center">
+    <p class="flex items-center gap-1 border border-gray-300 px-2 py-1 rounded cursor-pointer text-[8px] h-6">
+      <i class="fa-regular fa-calendar"></i>
+      <span>Dec 29, 2023 - Jan 4, 2024</span>
+    </p>
+  </div>
+
+  <!-- Month -->
+  <div class="month flex items-center gap-1 border border-gray-300 px-2 py-1 rounded cursor-pointer h-6 text-[8px] w-[50%]">
+    <p>Monthly</p>
+    <i class="fa-solid fa-angle-down"></i>
+  </div>
+
+</div>
+
     </div>
  <div class="cards grid-cols-1 md:grid-cols-2 lg:grid-cols-5 xl:grid-cols-5 gap-4 grid">
     <div class="card flex items-center justify-between bg-[#EEFFF0] p-4 rounded-lg shadow">
@@ -315,6 +334,32 @@
     </div>
  </div>
  </div>
+
+ <!-- chart -->
+  
+  <div class="bg-white p-4 sm:p-6 rounded-xl shadow w-full overflow-x-auto mt-5">
+
+  <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
+    <h3 class="text-lg font-semibold">Earning and Commission</h3>
+
+    <div class="flex flex-col sm:flex-row gap-3 text-xs sm:text-sm">
+      <span class="flex items-center gap-2">
+        <span class="w-3 h-3 bg-[#215DB5] rounded-full"></span>
+        Total earning : $2,968.90
+      </span>
+      <span class="flex items-center gap-2">
+        <span class="w-3 h-3 bg-[#599CFF] rounded-full"></span>
+        Commission given : $390.66
+      </span>
+    </div>
+  </div>
+
+  <div class="min-w-[700px]">
+    <div id="earningChart"></div>
+  </div>
+
+</div>
+
 </main>
 
 <!-- ================= SCRIPT ================= -->
@@ -328,6 +373,49 @@
     document.getElementById("sidebar").classList.add("-translate-x-full");
     document.getElementById("overlay").classList.add("hidden");
   }
+  var options = {
+    series: [
+      {
+        name: "Total earning",
+        data: [330,300,80,150,320,210,90,220,250,170,210,160,210,70,140,210,240,320,150,230,320,290,160,220,290,300,190,320,30,290,220]
+      },
+      {
+        name: "Commission given",
+        data: [60,50,20,30,55,40,20,45,50,30,35,30,40,20,30,35,45,60,30,50,60,55,30,45,60,55,35,55,10,50,40]
+      }
+    ],
+    chart: {
+      type: "bar",
+      height: 350,
+      stacked: true,
+      toolbar: { show: false }
+    },
+    plotOptions: {
+      bar: {
+        columnWidth: "35%",
+        borderRadius: 6
+      }
+    },
+    colors: ["#599CFF", "#215DB5"],
+    dataLabels: { enabled: false },
+    xaxis: {
+      categories: Array.from({ length: 31 }, (_, i) => i + 1)
+    },
+    yaxis: {
+      labels: {
+        formatter: val => val + "K"
+      }
+    },
+    grid: {
+      strokeDashArray: 5
+    },
+    legend: {
+      position: "top",
+      horizontalAlign: "right"
+    }
+  };
+
+  new ApexCharts(document.querySelector("#earningChart"), options).render();
 </script>
 
 </body>

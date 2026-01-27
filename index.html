@@ -166,7 +166,6 @@
   </nav>
 </aside>
 
-<!-- ================= MAIN ================= -->
 <main class="p-4">
     <div class="dash-content mb-3 flex justify-between">
         <div class="left-content">
@@ -175,8 +174,6 @@
           
         </div>
        <div class="right-content grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-2 items-center">
-  
-  <!-- Date -->
   <div class="date flex items-center">
     <p class="flex items-center gap-1 border border-gray-300 px-2 py-1 rounded cursor-pointer text-[8px] h-6">
       <i class="fa-regular fa-calendar"></i>
@@ -184,7 +181,6 @@
     </p>
   </div>
 
-  <!-- Month -->
   <div class="month flex items-center gap-1 border border-gray-300 px-2 py-1 rounded cursor-pointer h-6 text-[8px] w-[50%]">
     <p>Monthly</p>
     <i class="fa-solid fa-angle-down"></i>
@@ -359,64 +355,142 @@
   </div>
 
 </div>
+<!-- top sell -->
+ <div class="bg-white rounded-lg p-5 mt-5">
+  <h2 class="text-[18px] font-semibold text-gray-800 mb-3">
+    Top Selling Product
+  </h2>
+
+  <div class="border-t border-gray-200">
+    <!-- Header -->
+    <div class="grid grid-cols-5 py-3 text-gray-500 text-sm font-medium">
+      <div class="col-span-2">Product Name</div>
+      <div class="hidden">Category</div>
+      <div class="ml-20">Price</div>
+      <div class="hidden">Sold</div>
+      <div class="hidden">Profit</div>
+    </div>
+
+    <!-- Row -->
+    <div class="grid grid-cols-5 items-center py-4 border-t border-gray-100">
+      <div class="col-span-2 flex items-center gap-3">
+        <img src="assets/product-01.png" class="w-10 h-10 rounded-md" />
+        <span class="text-gray-800 text-xs">Apple Watch Series 7</span>
+      </div>
+      <div class="hidden">Electronics</div>
+      <div class="ml-20 text-xs">$269</div>
+      <div class="hidden">22</div>
+      <div class="text-green-500 hidden">$45</div>
+    </div>
+
+    <div class="grid grid-cols-5 items-center py-4 border-t border-gray-100">
+      <div class="col-span-2 flex items-center gap-3">
+        <img src="assets/product-02.png" class="w-10 h-10 rounded-md" />
+        <span class="text-gray-800 text-xs">Macbook Pro M1</span>
+      </div>
+      <div class="text-gray-600 hidden">Electronics</div>
+      <div class="ml-20 text-xs">$546</div>
+      <div class="hidden">34</div>
+      <div class="text-green-500 hidden">$125</div>
+    </div>
+
+    <div class="grid grid-cols-5 items-center py-4 border-t border-gray-100">
+      <div class="col-span-2 flex items-center gap-3">
+        <img src="assets/product-03.png" class="w-10 h-10 rounded-md" />
+        <span class="text-gray-800 text-xs">Dell Inspiron 15</span>
+      </div>
+      <div class="text-gray-600 hidden">Electronics</div>
+      <div class="ml-20 text-xs">$443</div>
+      <div class="hidden">64</div>
+      <div class="text-green-500 hidden">$247</div>
+    </div>
+
+    <div class="grid grid-cols-5 items-center py-4 border-t border-gray-100">
+      <div class="col-span-2 flex items-center gap-3">
+        <img src="assets/product-04.png" class="w-10 h-10 rounded-md" />
+        <span class="text-gray-800 text-xs">HP Probook 450</span>
+      </div>
+      <div class="text-gray-600 hidden">Electronics</div>
+      <div class="ml-20 text-xs">$499</div>
+      <div class="hidden">72</div>
+      <div class="text-green-500 hidden">$103</div>
+    </div>
+  </div>
+</div>
+<!-- rated -->
+<div class="bg-white rounded-lg p-5 mt-5">
+  <h2 class="text-[18px] font-semibold text-gray-800 mb-3">
+    Top Rated Product
+  </h2>
+
+  <div class="border-t border-gray-200">
+    <!-- Header -->
+    <div class="grid grid-cols-5 py-3 text-gray-500 text-sm font-medium">
+      <div class="col-span-2">Product Name</div>
+      <div class="hidden">Category</div>
+      <div class="ml-24">Rating</div>
+      <div class="hidden">Sold</div>
+      <div class="hidden">Profit</div>
+    </div>
+
+    <!-- Row -->
+    <div class="grid grid-cols-5 items-center py-4 border-t border-gray-100">
+      <div class="col-span-2 flex items-center gap-3">
+        <img src="assets/product-01.png" class="w-10 h-10 rounded-md" />
+        <span class="text-gray-800 text-xs">Apple Watch Series 7</span>
+      </div>
+      <div class="hidden">Electronics</div>
+      <div class="ml-20 text-xs flex items-center gap-1">
+        <i class="fa-solid fa-star text-yellow-400"></i>
+      <p>5(Reviews)</p></div>
+      <div class="hidden">22</div>
+      <div class="text-green-500 hidden">$45</div>
+    </div>
+
+    <div class="grid grid-cols-5 items-center py-4 border-t border-gray-100">
+      <div class="col-span-2 flex items-center gap-3">
+        <img src="assets/product-02.png" class="w-10 h-10 rounded-md" />
+        <span class="text-gray-800 text-xs">Macbook Pro M1</span>
+      </div>
+      <div class="text-gray-600 hidden">Electronics</div>
+      <div class="ml-20 text-xs flex items-center gap-1">
+        <i class="fa-solid fa-star text-yellow-400"></i>5(Reviews)</div>  
+      <div class="hidden">34</div>
+      <div class="text-green-500 hidden">$125</div>
+    </div>
+
+    <div class="grid grid-cols-5 items-center py-4 border-t border-gray-100">
+      <div class="col-span-2 flex items-center gap-3">
+        <img src="assets/product-03.png" class="w-10 h-10 rounded-md" />
+        <span class="text-gray-800 text-xs">Dell Inspiron 15</span>
+      </div>
+      <div class="text-gray-600 hidden">Electronics</div>
+      <div class="ml-20 text-xs flex items-center gap-1">
+        <i class="fa-solid fa-star text-yellow-400"></i>5(Reviews)</div>
+      <div class="hidden">64</div>
+      <div class="text-green-500 hidden">$247</div>
+    </div>
+
+    <div class="grid grid-cols-5 items-center py-4 border-t border-gray-100">
+      <div class="col-span-2 flex items-center gap-3">
+        <img src="assets/product-04.png" class="w-10 h-10 rounded-md" />
+        <span class="text-gray-800 text-xs">HP Probook 450</span>
+      </div>
+      <div class="text-gray-600 hidden">Electronics</div>
+      <div class="ml-20 text-xs flex items-center gap-1">
+        <i class="fa-solid fa-star text-yellow-400"></i>
+        <p>5(Reviews)</p>
+      </div>
+      <div class="hidden">72</div>
+      <div class="text-green-500 hidden">$103</div>
+    </div>
+  </div>
+</div>
 
 </main>
 
 <!-- ================= SCRIPT ================= -->
-<script>
-  function openSidebar() {
-    document.getElementById("sidebar").classList.remove("-translate-x-full");
-    document.getElementById("overlay").classList.remove("hidden");
-  }
-
-  function closeSidebar() {
-    document.getElementById("sidebar").classList.add("-translate-x-full");
-    document.getElementById("overlay").classList.add("hidden");
-  }
-  var options = {
-    series: [
-      {
-        name: "Total earning",
-        data: [330,300,80,150,320,210,90,220,250,170,210,160,210,70,140,210,240,320,150,230,320,290,160,220,290,300,190,320,30,290,220]
-      },
-      {
-        name: "Commission given",
-        data: [60,50,20,30,55,40,20,45,50,30,35,30,40,20,30,35,45,60,30,50,60,55,30,45,60,55,35,55,10,50,40]
-      }
-    ],
-    chart: {
-      type: "bar",
-      height: 350,
-      stacked: true,
-      toolbar: { show: false }
-    },
-    plotOptions: {
-      bar: {
-        columnWidth: "35%",
-        borderRadius: 6
-      }
-    },
-    colors: ["#599CFF", "#215DB5"],
-    dataLabels: { enabled: false },
-    xaxis: {
-      categories: Array.from({ length: 31 }, (_, i) => i + 1)
-    },
-    yaxis: {
-      labels: {
-        formatter: val => val + "K"
-      }
-    },
-    grid: {
-      strokeDashArray: 5
-    },
-    legend: {
-      position: "top",
-      horizontalAlign: "right"
-    }
-  };
-
-  new ApexCharts(document.querySelector("#earningChart"), options).render();
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>

@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>Naas eMart Dashboard</title>
 </head>
 
@@ -15,8 +16,9 @@
 
     <!-- LEFT -->
     <div class="flex items-center gap-3">
+      
       <!-- Hamburger -->
-      <button onclick="openSidebar()">
+      <button onclick="openSidebar()" class="flex items-center">
         <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor"
           viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -24,16 +26,19 @@
         </svg>
       </button>
 
-      <!-- Brand -->
-      <span class="text-lg font-semibold text-gray-800">
-        Naas eMart
-      </span>
+      <!-- Brand Logo -->
+      <img
+        src="assets/main logo.png"
+        alt="Naas eMart"
+        class="h-6 max-w-[250px] object-contain"
+      />
     </div>
 
     <!-- RIGHT -->
     <div class="flex items-center gap-4">
+      
       <!-- Search -->
-      <button>
+      <button class="flex items-center">
         <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor"
           viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -42,7 +47,7 @@
       </button>
 
       <!-- Notification -->
-      <button class="relative">
+      <button class="relative flex items-center">
         <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor"
           viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -50,10 +55,12 @@
         </svg>
         <span class="absolute -top-1 -right-1 w-2 h-2 bg-red-500 rounded-full"></span>
       </button>
+
     </div>
 
   </div>
 </header>
+
 
 <!-- ================= OVERLAY ================= -->
 <div id="overlay"
@@ -68,7 +75,7 @@
 
   <!-- Sidebar Header -->
   <div class="flex items-center justify-between px-4 py-4 border-b border-slate-700">
-    <span class="text-lg font-semibold">Naas eMart</span>
+    <span class="text-lg font-semibold"><img src="assets/nM logo.png" alt="" srcset=""></span>
     <button onclick="closeSidebar()" class="text-xl text-gray-400">&times;</button>
   </div>
 
@@ -159,19 +166,154 @@
 
 <!-- ================= MAIN ================= -->
 <main class="p-4">
- <div class="card">
-    <div class="left-side">
+    <div class="dash-content mb-3">
+        <div class="left-content">
+            <h4 class="text-xl font-semibold mb-2">Dashboard</h4>
+            <p class="text-gray-400 text-xs">dashboard/ <span class="text-blue-500 text-xs">dashboard</span></p>
+          
+        </div>
+        <div class="right-content"></div>
+    </div>
+ <div class="cards grid-cols-1 md:grid-cols-2 lg:grid-cols-5 xl:grid-cols-5 gap-4 grid">
+    <div class="card flex items-center justify-between bg-[#EEFFF0] p-4 rounded-lg shadow">
+    <div class="left-side flex items-center gap-4">
 <div class="logo">
 <img src="assets/Earning.png">
 </div>
 <div class="content">
-<h4>$ 2,968.90</h4>
-<p>Total earning</p>
+<h4 class="text-xl">$ 2,968.90</h4>
+<p class="text-[#64748B] text-xs">Total earning</p>
 </div>
     </div>
-    <div class="right-side">
-
+    <div class="right-side flex items-center">
+<i class="fa-solid fa-arrow-up text-green-500"></i>
+<p class="text-green-500 text-xs">18%</p>
     </div>
+ </div>
+  <div class="card flex items-center justify-between bg-[#FFFEF6] p-4 rounded-lg shadow">
+    <div class="left-side flex items-center gap-4">
+<div class="logo">
+<img src="assets/Commission.png">
+</div>
+<div class="content">
+<h4 class="text-xl">$ 390.66</h4>
+<p class="text-[#64748B] text-xs">Commission Given</p>
+</div>
+    </div>
+    <div class="right-side flex items-center">
+<i class="fa-solid fa-arrow-up text-green-500"></i>
+<p class="text-green-500 text-xs">18%</p>
+    </div>
+ </div>
+  <div class="card flex items-center justify-between bg-[#FFF6EA] p-4 rounded-lg shadow">
+    <div class="left-side flex items-center gap-4">
+<div class="logo">
+<img src="assets/Group.png">
+</div>
+<div class="content">
+<h4 class="text-xl">2600</h4>
+<p class="text-[#64748B] text-xs">Total item</p>
+</div>
+    </div>
+   
+ </div>
+  <div class="card flex items-center justify-between bg-[#EDFFF3] p-4 rounded-lg shadow">
+    <div class="left-side flex items-center gap-4">
+<div class="logo">
+<img src="assets/In stock.png">
+</div>
+<div class="content">
+<h4 class="text-xl">18.6</h4>
+<p class="text-[#64748B] text-xs">In Stock</p>
+</div>
+    </div>
+ </div>
+  <div class="card flex items-center justify-between bg-[#F8EBEC] p-4 rounded-lg shadow">
+    <div class="left-side flex items-center gap-4">
+<div class="logo">
+<img src="assets/Out of stock.png">
+</div>
+<div class="content">
+<h4 class="text-xl">190</h4>
+<p class="text-[#64748B] text-xs">Out Of Stock</p>
+</div>
+    </div>
+ </div>
+  <div class="card flex items-center justify-between bg-[#FFF4E6] p-4 rounded-lg shadow">
+    <div class="left-side flex items-center gap-4">
+<div class="logo">
+<img src="assets/Waiting For confirmation.png">
+</div>
+<div class="content">
+<h4 class="text-xl">15</h4>
+<p class="text-[#64748B] text-xs">Waiting For confirmation</p>
+</div>
+    </div>
+    <div class="right-side flex items-center">
+<i class="fa-solid fa-arrow-up text-green-500"></i>
+<p class="text-green-500 text-xs">18%</p>
+    </div>
+ </div>
+  <div class="card flex items-center justify-between bg-[#EBF7FF] p-4 rounded-lg shadow">
+    <div class="left-side flex items-center gap-4">
+<div class="logo">
+<img src="assets/Processing Order.png">
+</div>
+<div class="content">
+<h4 class="text-xl">70</h4>
+<p class="text-[#64748B] text-xs">Processing Order</p>
+</div>
+    </div>
+    <div class="right-side flex items-center">
+<i class="fa-solid fa-arrow-up text-green-500"></i>
+<p class="text-green-500 text-xs">18%</p>
+    </div>
+ </div>
+  <div class="card flex items-center justify-between bg-[#FAFEEB] p-4 rounded-lg shadow">
+    <div class="left-side flex items-center gap-4">
+<div class="logo">
+<img src="assets/Ready for delivery.png">
+</div>
+<div class="content">
+<h4 class="text-xl">42</h4>
+<p class="text-[#64748B] text-xs">Ready for delivery</p>
+</div>
+    </div>
+    <div class="right-side flex items-center">
+<i class="fa-solid fa-arrow-up text-green-500"></i>
+<p class="text-green-500 text-xs">18%</p>
+    </div>
+ </div>
+  <div class="card flex items-center justify-between bg-[#E4FBFF] p-4 rounded-lg shadow">
+    <div class="left-side flex items-center gap-4">
+<div class="logo">
+<img src="assets/Delivered.png">
+</div>
+<div class="content">
+<h4 class="text-xl">15K</h4>
+<p class="text-[#64748B] text-xs">Delivered Order</p>
+</div>
+    </div>
+    <div class="right-side flex items-center">
+<i class="fa-solid fa-arrow-up text-green-500"></i>
+<p class="text-green-500 text-xs">18%</p>
+    </div>
+ </div>
+  <div class="card flex items-center justify-between bg-[#FFF7F1] p-4 rounded-lg shadow">
+    <div class="left-side flex items-center gap-4">
+<div class="logo">
+<img src="assets/Refunded.png">
+</div>
+<div class="content">
+<h4 class="text-xl">$ 580.00</h4>
+<p class="text-[#64748B] text-xs">Refunded</p>
+</div>
+    </div>
+    <div class="right-side flex items-center">
+<i class="fa-solid fa-arrow-up text-green-500"></i>
+<p class="text-green-500 text-xs">18%</p>
+    </div>
+ </div>
  </div>
 </main>
 

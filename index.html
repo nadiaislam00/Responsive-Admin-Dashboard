@@ -1,11 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Naas eMart Dashboard</title>
 </head>
-<body>
-    
+
+<body class="bg-gray-50 overflow-x-hidden">
+
+<!-- ================= HEADER ================= -->
+<header class="w-full bg-white border-b border-gray-200">
+  <div class="flex items-center justify-between px-4 py-3">
+
+    <!-- LEFT -->
+    <div class="flex items-center gap-3">
+      <!-- Hamburger -->
+      <button onclick="openSidebar()">
+        <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor"
+          viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+      <!-- Brand -->
+      <span class="text-lg font-semibold text-gray-800">
+        Naas eMart
+      </span>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="flex items-center gap-4">
+      <!-- Search -->
+      <button>
+        <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor"
+          viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M21 21l-4.35-4.35M10 18a8 8 0 100-16 8 8 0 000 16z" />
+        </svg>
+      </button>
+
+      <!-- Notification -->
+      <button class="relative">
+        <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor"
+          viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M11 3v18m4-14v14m4-10v10" />
+        </svg>
+        <span class="absolute -top-1 -right-1 w-2 h-2 bg-red-500 rounded-full"></span>
+      </button>
+    </div>
+
+  </div>
+</header>
+
+<!-- ================= OVERLAY ================= -->
+<div id="overlay"
+  onclick="closeSidebar()"
+  class="fixed inset-0 bg-black bg-opacity-40 hidden z-40">
+</div>
+
+<!-- ================= SIDEBAR ================= -->
+<aside id="sidebar"
+  class="fixed top-0 left-0 h-full w-64 bg-slate-900 text-gray-200
+         transform -translate-x-full transition-transform duration-300 z-50 overflow-y-auto">
+
+  <!-- Sidebar Header -->
+  <div class="flex items-center justify-between px-4 py-4 border-b border-slate-700">
+    <span class="text-lg font-semibold">Naas eMart</span>
+    <button onclick="closeSidebar()" class="text-xl text-gray-400">&times;</button>
+  </div>
+
+  <!-- Menu -->
+  <nav class="px-4 py-3 text-sm space-y-4">
+
+    <!-- DASHBOARD -->
+    <div>
+      <p class="text-xs text-gray-400 uppercase mb-2">Dashboard</p>
+      <a href="#" class="flex items-center gap-3 px-3 py-2 rounded hover:bg-slate-800">
+        Dashboard
+      </a>
+    </div>
+
+    <!-- POINT OF SALE -->
+    <div>
+      <p class="text-xs text-gray-400 uppercase mb-2">Point of Sale</p>
+      <a href="#" class="flex items-center gap-3 px-3 py-2 rounded hover:bg-slate-800">
+        POS
+      </a>
+    </div>
+
+    <!-- ORDER MANAGEMENT -->
+    <div>
+      <p class="text-xs text-gray-400 uppercase mb-2">Order Management</p>
+      <a href="#" class="flex items-center gap-3 px-3 py-2 rounded hover:bg-slate-800">
+        Orders
+      </a>
+    </div>
+
+    <!-- ITEM MANAGEMENT -->
+    <div>
+      <p class="text-xs text-gray-400 uppercase mb-2">Item Management</p>
+      <a href="#" class="block px-3 py-2 rounded hover:bg-slate-800">Items</a>
+      <a href="#" class="block px-3 py-2 rounded hover:bg-slate-800">Addons</a>
+      <a href="#" class="block px-3 py-2 rounded hover:bg-slate-800">Categories</a>
+      <a href="#" class="block px-3 py-2 rounded hover:bg-slate-800">Tag</a>
+    </div>
+
+    <!-- MARKETING SECTION -->
+    <div>
+      <p class="text-xs text-gray-400 uppercase mb-2">Marketing Section</p>
+      <a href="#" class="block px-3 py-2 rounded hover:bg-slate-800">Campaigns</a>
+      <a href="#" class="block px-3 py-2 rounded hover:bg-slate-800">Coupons</a>
+      <a href="#" class="block px-3 py-2 rounded hover:bg-slate-800">Banners</a>
+    </div>
+
+    <!-- ADVERTISEMENT MANAGEMENT -->
+    <div>
+      <p class="text-xs text-gray-400 uppercase mb-2">Advertisement Management</p>
+      <a href="#" class="block px-3 py-2 rounded hover:bg-slate-800">
+        Advertisement
+      </a>
+    </div>
+
+    <!-- WALLET & FINANCE -->
+    <div>
+      <p class="text-xs text-gray-400 uppercase mb-2">Wallet & Finance Management</p>
+      <a href="#" class="block px-3 py-2 rounded hover:bg-slate-800">
+        Wallet
+      </a>
+    </div>
+
+    <!-- EMPLOYEE MANAGEMENT -->
+    <div>
+      <p class="text-xs text-gray-400 uppercase mb-2">Employee Management</p>
+      <a href="#" class="block px-3 py-2 rounded hover:bg-slate-800">
+        Employee Role
+      </a>
+      <a href="#" class="block px-3 py-2 rounded hover:bg-slate-800">
+        Employees
+      </a>
+    </div>
+
+    <!-- REPORTS -->
+    <div>
+      <p class="text-xs text-gray-400 uppercase mb-2">Reports</p>
+      <a href="#" class="block px-3 py-2 rounded hover:bg-slate-800">Expense Report</a>
+      <a href="#" class="block px-3 py-2 rounded hover:bg-slate-800">Disbursement Report</a>
+      <a href="#" class="block px-3 py-2 rounded hover:bg-slate-800">VAT Report</a>
+      <a href="#" class="block px-3 py-2 rounded hover:bg-slate-800">Sales Report</a>
+      <a href="#" class="block px-3 py-2 rounded hover:bg-slate-800">Payment History</a>
+      <a href="#" class="block px-3 py-2 rounded hover:bg-slate-800">Payout Requests</a>
+    </div>
+
+  </nav>
+</aside>
+
+<!-- ================= MAIN ================= -->
+<main class="p-4">
+ <div class="card">
+    <div class="left-side">
+<div class="logo">
+<img src="assets/Earning.png">
+</div>
+<div class="content">
+<h4>$ 2,968.90</h4>
+<p>Total earning</p>
+</div>
+    </div>
+    <div class="right-side">
+
+    </div>
+ </div>
+</main>
+
+<!-- ================= SCRIPT ================= -->
+<script>
+  function openSidebar() {
+    document.getElementById("sidebar").classList.remove("-translate-x-full");
+    document.getElementById("overlay").classList.remove("hidden");
+  }
+
+  function closeSidebar() {
+    document.getElementById("sidebar").classList.add("-translate-x-full");
+    document.getElementById("overlay").classList.add("hidden");
+  }
+</script>
+
 </body>
 </html>

@@ -11,7 +11,7 @@
    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <title>Naas eMart Dashboard</title>
+  <title>Responsive Admin Dashboard</title>
 </head>
 
 <body class="bg-gray-50 overflow-x-hidden ">
@@ -76,15 +76,11 @@
     </div>
   </div>
 </header>
-
-
-<!-- ================= OVERLAY ================= -->
 <div id="overlay"
   onclick="closeSidebar()"
   class="fixed inset-0 bg-black bg-opacity-40 hidden z-40">
 </div>
 
-<!-- ================= SIDEBAR ================= -->
 <aside id="sidebar"
   class="fixed top-0 left-0 h-full w-64 bg-slate-900 text-gray-200
          transform -translate-x-full transition-transform duration-300 z-50 overflow-y-auto">
@@ -102,6 +98,7 @@
     <div>
       <p class="text-xs text-gray-400 uppercase mb-2">Dashboard</p>
      <div class="dash flex items-center">
+      <img src="assets/dashboard.png" alt="" srcset="">
        <a href="#" class="flex items-center gap-3 px-3 py-2 rounded hover:bg-slate-800">
         Dashboard
       </a> <i class="fa-solid fa-angle-down"></i>
@@ -112,6 +109,7 @@
     <div>
       <p class="text-xs text-gray-400 uppercase mb-2">Point of Sale</p>
       <div class="flex items-center">
+        <img src="assets/shopping-bag-02.png" alt="" srcset="">
         <a href="#" class="flex items-center gap-3 px-3 py-2 rounded hover:bg-slate-800">
         POS
       </a>
@@ -123,6 +121,7 @@
     <div>
       <p class="text-xs text-gray-400 uppercase mb-2">Order Management</p>
       <div class="flex items-center">
+        <img src="assets/shopping-bag-02.png" alt="" srcset="">
         <a href="#" class="flex items-center gap-3 px-3 py-2 rounded hover:bg-slate-800">
         Orders
       </a>
@@ -133,19 +132,24 @@
     <!-- ITEM MANAGEMENT -->
     <div>
       <p class="text-xs text-gray-400 uppercase mb-2">Item Management</p>
-      <div class="flex items-center"><a href="#" class="block px-3 py-2 rounded hover:bg-slate-800">Items</a>
+      <div class="flex items-center">
+        <img src="assets/product-loading.png" alt="" srcset="">
+        <a href="#" class="block px-3 py-2 rounded hover:bg-slate-800">Items</a>
       <i class="fa-solid fa-angle-down"></i>
 
     </div>
       <div class="flex items-center">
+        <img src="assets/select-02.png" alt="" srcset="">
         <a href="#" class="block px-3 py-2 rounded hover:bg-slate-800">Addons</a>
       <i class="fa-solid fa-angle-down"></i>
       </div>
      <div class="flex items-center">
+      <img src="assets/hierarchy-square-01.png" alt="" srcset="">
        <a href="#" class="block px-3 py-2 rounded hover:bg-slate-800">Categories</a>
        <i class="fa-solid fa-angle-down"></i>
      </div>
       <div class="flex items-center gap-0">
+        <img src="assets/tags.png" alt="" srcset="">
         <a href="#" class="block px-3 py-2 rounded hover:bg-slate-800">Tag</a>
       <i class="fa-solid fa-angle-down"></i>
       </div>
@@ -155,14 +159,17 @@
     <div>
       <p class="text-xs text-gray-400 uppercase mb-2">Marketing Section</p>
      <div class="flex items-center">
+      <img src="assets/ticket-star.png" alt="" srcset="">
        <a href="#" class="block px-3 py-2 rounded hover:bg-slate-800">Campaigns</a>
        <i class="fa-solid fa-angle-down"></i>
      </div>
       <div class="flex items-center gap-0">
+      <img src="assets/ticket-02.png" alt="" srcset="">
         <a href="#" class="block px-3 py-2 rounded hover:bg-slate-800">Coupons</a>
        <i class="fa-solid fa-angle-down"></i>
       </div>
      <div class="flex items-center">
+      <img src="assets/rectangular.png" alt="" srcset="">
        <a href="#" class="block px-3 py-2 rounded hover:bg-slate-800">Banners</a>
        <i class="fa-solid fa-angle-down"></i>
      </div>
@@ -172,6 +179,7 @@
     <div>
       <p class="text-xs text-gray-400 uppercase mb-2">Advertisement Management</p>
       <div class="flex items-center">
+        <img src="assets/hot-air-balloon.png" alt="" srcset="">
         <a href="#" class="block px-3 py-2 rounded hover:bg-slate-800">
         Advertisement
       </a>
@@ -183,6 +191,7 @@
     <div>
       <p class="text-xs text-gray-400 uppercase mb-2">Wallet & Finance Management</p>
       <div class="flex items-center">
+        <img src="assets/wallet-01.png" alt="" srcset="">
         <a href="#" class="block px-3 py-2 rounded hover:bg-slate-800">
         Wallet
       </a>
@@ -194,12 +203,14 @@
     <div>
       <p class="text-xs text-gray-400 uppercase mb-2">Employee Management</p>
       <div class="flex items-center">
+        <img src="assets/user-star-02.png" alt="" srcset="">
         <a href="#" class="block px-3 py-2 rounded hover:bg-slate-800">
         Employee Role
       </a>
        <i class="fa-solid fa-angle-down"></i>
       </div>
       <div class="flex items-center">
+        <img src="assets/user-multiple.png" alt="" srcset="">
         <a href="#" class="block px-3 py-2 rounded hover:bg-slate-800">
         Employees
       </a>
@@ -210,12 +221,30 @@
     <!-- REPORTS -->
     <div>
       <p class="text-xs text-gray-400 uppercase mb-2">Reports</p>
+     <div class="flex items-center gap-1">
+       <img src="assets/analytics-up.png" alt="" srcset="">
       <a href="#" class="block px-3 py-2 rounded hover:bg-slate-800">Expense Report</a>
+     </div>
+      <div class="flex items-center gap-1">
+        <img src="assets/analysis-text-link.png" alt="" srcset="">
       <a href="#" class="block px-3 py-2 rounded hover:bg-slate-800">Disbursement Report</a>
+      </div>
+     <div class="flex items-center gap-1">
+       <img src="assets/chart-line-data-02.png" alt="" srcset="">
       <a href="#" class="block px-3 py-2 rounded hover:bg-slate-800">VAT Report</a>
+     </div>
+      <div class="flex items-center gap-1">
+        <img src="assets/chart-line-data-03.png" alt="" srcset="">
       <a href="#" class="block px-3 py-2 rounded hover:bg-slate-800">Sales Report</a>
+      </div>
+      <div class="flex items-center gap-1">
+        <img src="assets/chart-bubble-01.png" alt="" srcset="" class="">
       <a href="#" class="block px-3 py-2 rounded hover:bg-slate-800">Payment History</a>
+      </div>
+      <div class="flex items-center gap-1 mb-2">
+        <img src="assets/chart-bar-line.png" alt="" srcset="">
       <a href="#" class="block px-3 py-2 rounded hover:bg-slate-800">Payout Requests</a>
+      </div>
     </div>
       <div class="flex items-center pl-4 border-l border-gray-200 ml-2">
         <div class="text-right mr-3">
@@ -266,7 +295,7 @@
 </div>
 <div class="content">
 <h4 class="text-xl montserrat">$ 2,968.90</h4>
-<p class="text-[#64748B] text-xs">Total earning</p>
+<p class="text-[#64748B] text-xs">Total Earning</p>
 </div>
     </div>
     <div class="right-side flex items-center">
@@ -296,7 +325,7 @@
 </div>
 <div class="content">
 <h4 class="text-xl montserrat">2600</h4>
-<p class="text-[#64748B] text-xs">Total item</p>
+<p class="text-[#64748B] text-xs">Total Item</p>
 </div>
     </div>
    
@@ -307,7 +336,7 @@
 <img src="assets/In stock.png">
 </div>
 <div class="content">
-<h4 class="text-xl montserrat">18.6</h4>
+<h4 class="text-xl montserrat">18.6K</h4>
 <p class="text-[#64748B] text-xs">In Stock</p>
 </div>
     </div>
@@ -330,7 +359,7 @@
 </div>
 <div class="content">
 <h4 class="text-xl montserrat">15</h4>
-<p class="text-[#64748B] text-xs">Waiting For confirmation</p>
+<p class="text-[#64748B] text-xs">Waiting For Confirmation</p>
 </div>
     </div>
     <div class="right-side flex items-center">
@@ -360,7 +389,7 @@
 </div>
 <div class="content">
 <h4 class="text-xl montserrat">42</h4>
-<p class="text-[#64748B] text-xs">Ready for delivery</p>
+<p class="text-[#64748B] text-xs">Ready For Delivery</p>
 </div>
     </div>
     <div class="right-side flex items-center">
@@ -448,7 +477,7 @@
     <div class="grid grid-cols-5 lg:grid-cols-6 items-center py-5 border-t border-gray-100">
       <div class="col-span-2 lg:col-span-2 flex items-center gap-4">
         <img src="assets/product-01.png" class="w-12 h-12 rounded-lg" />
-        <span class="text-gray-800 text-sm">Apple WatchSeries 7</span>
+        <span class="text-gray-800 text-sm">Apple Watch Series 7</span>
       </div>
       <div class="hidden lg:block text-center">Electronics</div>
       <div class="text-center text-sm ml-20 lg:ml-0">$269</div>
@@ -494,7 +523,7 @@
   <!-- Top Rated -->
   <div class="bg-white rounded-lg p-5 mt-5 w-full poppins">
   <h2 class="text-[18px] font-semibold text-gray-800 mb-3">
-    Top Rated Product
+    Top Rated Items
   </h2>
 
   <div class="border-t border-gray-200">
@@ -517,9 +546,9 @@
       <div class="hidden lg:block text-center">Electronics</div>
 
       <!-- Rating -->
-      <div class="flex items-center text-sm ml-20 lg:flex-row lg:items-center lg:justify-center lg:gap-1 lg:ml-0">
+      <div class="flex items-center text-sm ml-12 gap-2 lg:flex-row lg:items-center lg:justify-center lg:gap-1 lg:ml-0">
         <i class="fa-solid fa-star text-yellow-400 mb-1"></i>
-        <span>5(Reviews)</span>
+        <p>5(Reviews)</p>
       </div>
 
       <div class="hidden lg:block text-center">22</div>
@@ -533,9 +562,9 @@
       </div>
       <div class="hidden lg:block text-center">Electronics</div>
 
-      <div class="flex items-center text-sm ml-20 lg:flex-row lg:items-center lg:justify-center lg:gap-1 lg:ml-0">
+      <div class="flex items-center text-sm ml-12 gap-2 lg:flex-row lg:items-center lg:justify-center lg:gap-1 lg:ml-0">
         <i class="fa-solid fa-star text-yellow-400 mb-1"></i>
-        <span>5(Reviews)</span>
+        <p>5(Reviews)</p>
       </div>
 
       <div class="hidden lg:block text-center">34</div>
@@ -549,9 +578,9 @@
       </div>
       <div class="hidden lg:block text-center">Electronics</div>
 
-      <div class="flex items-center text-sm ml-20 lg:flex-row lg:items-center lg:justify-center lg:gap-1 lg:ml-0">
+      <div class="flex items-center text-sm ml-12 gap-2 lg:flex-row lg:items-center lg:justify-center lg:gap-1 lg:ml-0">
         <i class="fa-solid fa-star text-yellow-400 mb-1"></i>
-        <span>5(Reviews)</span>
+        <p>5(Reviews)</p>
       </div>
 
       <div class="hidden lg:block text-center">64</div>
@@ -565,9 +594,9 @@
       </div>
       <div class="hidden lg:block text-center">Electronics</div>
 
-      <div class="flex items-center text-sm ml-20 lg:flex-row lg:items-center lg:justify-center lg:gap-1 lg:ml-0">
+      <div class="flex items-center text-sm ml-12 gap-2 lg:flex-row lg:items-center lg:justify-center lg:gap-1 lg:ml-0">
         <i class="fa-solid fa-star text-yellow-400 mb-1"></i>
-        <span>5(Reviews)</span>
+        <p>5(Reviews)</p>
       </div>
 
       <div class="hidden lg:block text-center">72</div>
@@ -581,7 +610,7 @@
 </div>
 </div>
 </main>
-<footer class="w-full bg-gray-100 border-t border-gray-200 poppins">
+<footer class="w-full bg-gray-100 border-t border-gray-200 poppins text-[#545454]">
   <div class="flex-col items-center lg:flex-row lg:justify-between px-4 py-3 flex">
     
     <!-- Left -->
@@ -590,7 +619,7 @@
     </div>
 
     <!-- Right -->
-    <div class="flex gap-2 text-sm items-center text-center justify-center mb-3">
+    <div class="flex gap-2 text-sm items-center text-center justify-center mb-3 text-sm">
       <a href="#" class="">Profile</a>
 
       <span class="w-2 h-2 bg-gray-400 rounded-full"></span>
@@ -599,7 +628,7 @@
 
       <span class="w-2 h-2 bg-gray-400 rounded-full"></span>
       <span>
-        Software version : <span class="font-medium text-gray-700">3.5</span>
+        Software version:<span class="font-medium">3.5</span>
       </span>
     </div>
 
